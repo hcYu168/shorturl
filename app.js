@@ -8,10 +8,6 @@ class AppBootHook {
   async willReady() {
     // await this.app.model.sync({ force: false });
   }
-
-  async didReady() {
-
-  }
 }
 
 module.exports = AppBootHook;

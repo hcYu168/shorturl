@@ -67,7 +67,7 @@ class UrlService extends Service {
         count: 1,
         short_url: url,
       },
-    }).then(([ result, meteData ]) => {
+    }).then(([ result ]) => {
       return result;
     });
     if (!result.affectedRows > 0) {

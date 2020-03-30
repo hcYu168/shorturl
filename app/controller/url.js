@@ -4,8 +4,8 @@ const Controller = require('egg').Controller;
 
 class UrlController extends Controller {
   async index() {
-    const { ctx, service } = this;
-    const { url } = ctx.request.body;
+    const { ctx } = this;
+    // const { url } = ctx.request.body;
     // const shortUrl = await service.url.getShortUrl(url);
     ctx.body = {
       code: 200,

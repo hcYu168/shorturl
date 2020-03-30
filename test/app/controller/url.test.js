@@ -2,7 +2,7 @@
 
 const { app, assert } = require('egg-mock/bootstrap');
 
-describe('test/app/controller/home.test.js', () => {
+describe('test/app/controller/url.test.js', () => {
   it('should assert', () => {
     const pkg = require('../../../package.json');
     assert(app.config.keys.startsWith(pkg.name));
@@ -11,10 +11,11 @@ describe('test/app/controller/home.test.js', () => {
     // yield ctx.service.xx();
   });
 
-  it('should GET /', () => {
+  it('should post /api/v1/user/getShortUrl', () => {
     return app.httpRequest()
-      .get('/')
-      .expect('hi, egg')
-      .expect(200);
+      .post('/api/v1/user/getShortUrl')
+      .expect({
+        code: 200,
+      });
   });
 });
