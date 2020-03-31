@@ -7,9 +7,9 @@ class UrlController extends Controller {
     const { ctx } = this;
     // const { url } = ctx.request.body;
     // const shortUrl = await service.url.getShortUrl(url);
+    ctx.logger.info('test');
     ctx.body = {
       code: 200,
-      // data: shortUrl,
     };
   }
 
