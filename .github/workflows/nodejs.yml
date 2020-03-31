@@ -26,14 +26,3 @@ jobs:
         npm test 
       env:
         CI: true
-    # develop
-    - name: ssh deploy
-      uses: easingthemes/ssh-deploy@v2.0.9
-      env: 
-        SSH_PRIVATE_KEY: ${{secrets.ALIYUN}}
-        ARGS: "-avz --delete"
-        REMOTE_HOST: "47.107.33.40"
-        REMOTE_USER: "ubuntu"
-        SOURCE: "/"
-        TARGET: "/home/ubuntu/shorturl/"
-      run: echo "hello word"
