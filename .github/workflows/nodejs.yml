@@ -34,4 +34,5 @@ jobs:
         ARGS: "-avz --delete"
         REMOTE_HOST: "47.107.33.40"
         REMOTE_USER: "ubuntu"
+        SOURCE: "/"
         TARGET: "/home/ubuntu/shorturl/"
